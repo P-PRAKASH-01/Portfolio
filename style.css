@@ -1,92 +1,96 @@
-:root {
-  --primary: #4F200D; /* Dark Brown */
-  --secondary: #FF9A00; /* Orange/Gold */
-  --soft: #F6F1E9; /* Light Cream */
-  --accent: #FFD93D; /* Bright Yellow */
-}
+    :root {
+      --primary: #4F200D; /* Dark Brown */
+      --secondary: #FF9A00; /* Orange/Gold */
+      --soft: #F6F1E9; /* Light Cream */
+      --accent: #FFD93D; /* Bright Yellow */
+    }
 
-.gradient-text {
-  background: linear-gradient(90deg, var(--secondary), var(--accent));
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent
-}
+    .gradient-text {
+      background: linear-gradient(90deg, var(--secondary), var(--accent));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent
+    }
 
-.glow-accent {
-  box-shadow: 0 6px 24px rgba(255, 154, 0, 0.12);
-}
+    .glow-accent {
+      box-shadow: 0 6px 24px rgba(255, 154, 0, 0.12);
+    }
 
-.marquee {
-  display: flex;
-  gap: 1.25rem;
-  align-items: center
-}
-/* small utilities for gradient underline */
-.under-accent {
-  background-image: linear-gradient(90deg, var(--accent), var(--secondary));
-  background-repeat: no-repeat;
-  background-size: 100% 0.18em;
-  background-position: 0 100%
-}
+    .marquee {
+      display: flex;
+      gap: 1.25rem;
+      align-items: center
+    }
+    /* small utilities for gradient underline */
+    .under-accent {
+      background-image: linear-gradient(90deg, var(--accent), var(--secondary));
+      background-repeat: no-repeat;
+      background-size: 100% 0.18em;
+      background-position: 0 100%
+    }
 
-/* responsive tweaks */
-@media (max-width:640px) {
-  .hero-title {
-    font-size: 2rem
-  }
-}
+    /* responsive tweaks */
+    @media (max-width:640px) {
+      .hero-title {
+        font-size: 2rem
+      }
+    }
 
-section {
-  margin-bottom: 4rem;
-  padding-top: 4rem;
-}
+    section {
+      margin-bottom: 4rem;
+      padding-top: 4rem;
+    }
 
-.section-divider {
-  height: 1px;
-  margin: 3rem auto;
-  background: linear-gradient(to right, transparent, var(--secondary), transparent);
-}
+    .section-divider {
+      height: 1px;
+      margin: 3rem auto;
+      background: linear-gradient(to right, transparent, var(--secondary), transparent);
+    }
 
-h2 {
-  margin-bottom: 2rem;
-}
+    h2 {
+      margin-bottom: 2rem;
+    }
 
-a:hover,
-button:hover {
-  transition: all 0.3s ease;
-  box-shadow: 0 8px 20px rgba(255, 154, 0, 0.3);
-}
+    a:hover,
+    button:hover {
+      transition: all 0.3s ease;
+      box-shadow: 0 8px 20px rgba(255, 154, 0, 0.3);
+    }
 
-nav a:not(.logo-link) {
-  position: relative;
-  overflow: hidden;
-}
+    nav a:not(.logo-link) {
+      position: relative;
+      overflow: hidden;
+    }
 
-nav a.logo-link {
-  overflow: visible;
-}
+    nav a.logo-link {
+      overflow: visible;
+    }
 
-nav a::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 0;
-  height: 2px;
-  background: var(--secondary);
-  transition: width 0.3s ease;
-}
+    nav a::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0;
+      height: 2px;
+      background: var(--secondary);
+      transition: width 0.3s ease;
+    }
 
-nav a:hover::after {
-  width: 100%;
-}
-.reveal {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: all 0.8s ease-out;
-}
+    nav a:hover::after {
+      width: 100%;
+    }
+    .reveal {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.8s ease-out;
+    }
 
-.reveal.active {
-  opacity: 1;
-  transform: translateY(0);
-}
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    /* Override hover transform effect from external stylesheet */
+    a:hover, button:hover {
+      transform: none !important;
+    }
