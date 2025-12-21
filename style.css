@@ -94,3 +94,95 @@
     a:hover, button:hover {
       transform: none !important;
     }
+/* Skills Section Enhancements */
+.skill-item:hover svg {
+    transform: scale(1.1);
+    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.skill-item {
+    background-color: transparent;
+    /* Ensure smooth transition */
+}
+
+/* Project Section Enhancements */
+.filter-btn.active {
+    background-color: var(--secondary);
+    color: var(--primary);
+}
+
+.project-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.project-thumb {
+    height: 180px;
+    background: linear-gradient(120deg, var(--soft), #eaddcf);
+    position: relative;
+    overflow: hidden;
+}
+
+.project-thumb img {
+    transition: transform 0.5s ease;
+}
+
+.project-card:hover .project-thumb img {
+    transform: scale(1.05);
+}
+
+/* Animation for filtering */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fade-in {
+    animation: fadeIn 0.4s ease-out forwards;
+}
+/* Carousel Utilities */
+.hide-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+.hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.snap-x {
+    scroll-snap-type: x mandatory;
+}
+
+.snap-center {
+    scroll-snap-align: center;
+}
+
+/* Modal Animation */
+#image-modal.flex {
+    animation: fadeIn 0.3s ease-out;
+}
+
+#image-modal img {
+    animation: scaleIn 0.3s ease-out forwards;
+}
+
+@keyframes scaleIn {
+    from {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
