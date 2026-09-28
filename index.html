@@ -28,6 +28,12 @@
     <!-- EmailJS -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
+    <!-- Social Meta Tags / SEO -->
+    <meta property="og:title" content="Prakash | Creative Developer & AIML Student">
+    <meta property="og:description" content="Portfolio of Prakash - CSE (AIML) Student specializing in Web Development, ML models, and interactive web tools.">
+    <meta property="og:image" content="Profile.jpeg">
+    <meta property="og:type" content="website">
+
     <script>
         tailwind.config = {
             darkMode: 'class',
@@ -107,6 +113,7 @@
         .hide-scrollbar {
             -ms-overflow-style: none;
             scrollbar-width: none;
+        }
 
         /* Success Message Animation */
         .message-pop-in {
@@ -155,7 +162,6 @@
                 transform: scale(1);
             }
         }
-        }
 
         /* Gradient Text */
         .text-gradient {
@@ -182,15 +188,15 @@
                 <!-- Desktop Menu -->
                 <div class="hidden md:flex items-center gap-8">
                     <div class="flex items-center gap-6 text-sm font-medium text-slate-600 dark:text-slate-400">
-                        <a href="#home" class="hover:text-brand-600 dark:hover:text-brand-500 transition-colors">Home</a>
-                        <a href="#certificates" class="hover:text-brand-600 dark:hover:text-brand-500 transition-colors">Certificates</a>
-                        <a href="#projects" class="hover:text-brand-600 dark:hover:text-brand-500 transition-colors">Projects</a>
-                        <a href="#skills" class="hover:text-brand-600 dark:hover:text-brand-500 transition-colors">Skills</a>
+                        <a href="#home" class="nav-link hover:text-brand-600 dark:hover:text-brand-500 transition-colors">Home</a>
+                        <a href="#certificates" class="nav-link hover:text-brand-600 dark:hover:text-brand-500 transition-colors">Certificates</a>
+                        <a href="#projects" class="nav-link hover:text-brand-600 dark:hover:text-brand-500 transition-colors">Projects</a>
+                        <a href="#skills" class="nav-link hover:text-brand-600 dark:hover:text-brand-500 transition-colors">Skills</a>
                     </div>
                     
                     <div class="h-6 w-px bg-gray-300 dark:bg-gray-700"></div>
 
-                    <button id="theme-toggle" class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-white/5 text-slate-600 dark:text-slate-400 transition-colors">
+                    <button id="theme-toggle" class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-white/5 text-slate-600 dark:text-slate-400 transition-colors" title="Toggle theme">
                         <i data-lucide="moon" class="w-5 h-5 hidden dark:block"></i>
                         <i data-lucide="sun" class="w-5 h-5 block dark:hidden"></i>
                     </button>
@@ -254,6 +260,9 @@
                         </a>
                         <a href="#contact" class="px-8 py-4 rounded-xl border border-slate-200 dark:border-white/10 hover:bg-slate-50 dark:hover:bg-white/5 font-bold transition-all flex items-center gap-2 dark:text-white">
                             Contact Me
+                        </a>
+                        <a href="resume.pdf" target="_blank" download class="px-8 py-4 rounded-xl border border-brand-500/30 bg-brand-500/10 text-brand-600 dark:text-brand-400 hover:bg-brand-500 hover:text-white font-bold transition-all flex items-center gap-2 shadow-sm">
+                            <i data-lucide="download" class="w-4 h-4"></i> Download CV
                         </a>
                     </div>
 
@@ -415,6 +424,23 @@
                     <h4 class="text-lg font-bold text-slate-900 dark:text-white mb-1">AWS Cloud Practitioner</h4>
                     <div class="flex justify-between items-center mt-4 border-t border-slate-200 dark:border-white/10 pt-4">
                         <span class="text-sm text-slate-500 dark:text-slate-400">NmindsAcademy</span>
+                        <span class="text-xs font-mono text-slate-400">2025</span>
+                    </div>
+                </div>
+
+                 <!-- Card 5 (GUVI) -->
+                 <div class="cert-card min-w-[300px] md:min-w-[400px] snap-center glass rounded-2xl p-4 md:p-6 hover:border-brand-500/30 transition-all group">
+                    <div class="relative aspect-video rounded-lg overflow-hidden mb-4 bg-slate-100 dark:bg-slate-800">
+                        <img src="certificates/GUVI.png" alt="Certificate" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" onerror="this.src='https://via.placeholder.com/400x300?text=GUVI+Certificate'">
+                        <div class="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                            <button class="view-cert-btn px-4 py-2 bg-white rounded-lg text-sm font-bold flex items-center gap-2">
+                                <i data-lucide="eye" class="w-4 h-4"></i> View
+                            </button>
+                        </div>
+                    </div>
+                    <h4 class="text-lg font-bold text-slate-900 dark:text-white mb-1">Full Stack Development Certification</h4>
+                    <div class="flex justify-between items-center mt-4 border-t border-slate-200 dark:border-white/10 pt-4">
+                        <span class="text-sm text-slate-500 dark:text-slate-400">GUVI Geek Network</span>
                         <span class="text-xs font-mono text-slate-400">2025</span>
                     </div>
                 </div>
@@ -770,6 +796,28 @@
         revealElems.forEach(el => {
             el.style.opacity = '0'; // Initial state
             revealObserver.observe(el);
+        });
+
+        // --- SCROLLSPY LOGIC ---
+        const navLinks = document.querySelectorAll('.nav-link');
+        const sections = document.querySelectorAll('section[id]');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 100;
+                const sectionHeight = section.offsetHeight;
+                if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('text-brand-500', 'font-bold');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('text-brand-500', 'font-bold');
+                }
+            });
         });
 
         // --- CERTIFICATE CAROUSEL ---
