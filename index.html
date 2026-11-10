@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prakash | Creative Developer</title>
+    <title>Prakash | Creative Developer & AIML Student</title>
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -31,7 +31,7 @@
     <!-- Social Meta Tags / SEO -->
     <meta property="og:title" content="Prakash | Creative Developer & AIML Student">
     <meta property="og:description" content="Portfolio of Prakash - CSE (AIML) Student specializing in Web Development, ML models, and interactive web tools.">
-    <meta property="og:image" content="Profile.jpeg">
+    <meta property="og:image" content="https://prakash--portfolio.vercel.app/Profile.jpeg">
     <meta property="og:type" content="website">
 
     <script>
@@ -269,7 +269,7 @@
                     <!-- Stats -->
                     <div class="grid grid-cols-3 gap-8 border-t border-slate-200 dark:border-white/10 pt-8">
                         <div>
-                            <p class="text-3xl font-bold text-slate-900 dark:text-white">3</p>
+                            <p id="project-count" class="text-3xl font-bold text-slate-900 dark:text-white">5</p>
                             <p class="text-sm text-slate-500 dark:text-slate-400">Projects</p>
                         </div>
                         <div>
@@ -451,105 +451,12 @@
     <!-- Projects Section -->
     <section id="projects" class="py-24 bg-slate-50 dark:bg-[#0B0C15]">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6 reveal">
-                <div>
-                    <h2 class="text-sm font-mono font-bold text-brand-500 mb-2 tracking-widest uppercase">Portfolio</h2>
-                    <h3 class="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white">Featured Projects</h3>
-                </div>
-                
-                <!-- Filter Buttons -->
-                <div class="glass p-1.5 rounded-xl flex gap-1">
-                    <button class="filter-btn active px-4 py-2 rounded-lg text-sm font-bold transition-all bg-white dark:bg-white/10 shadow-sm" data-filter="all">All</button>
-                    <button class="filter-btn px-4 py-2 rounded-lg text-sm font-medium text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-all" data-filter="web">Web Dev</button>
-                    <button class="filter-btn px-4 py-2 rounded-lg text-sm font-medium text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-all" data-filter="ai">AI/ML</button>
-                </div>
+            <div class="mb-12 reveal">
+                <h2 class="text-sm font-mono font-bold text-brand-500 mb-2 tracking-widest uppercase">Portfolio</h2>
+                <h3 class="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white">Featured Projects</h3>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="projects-grid">
-                
-                <!-- Project 1 -->
-                <article class="project-card group bg-white dark:bg-white/5 rounded-2xl overflow-hidden border border-slate-200 dark:border-white/5 hover:border-brand-500/50 transition-all duration-300 hover:shadow-2xl hover:shadow-brand-500/10 reveal" data-category="ai">
-                    <div class="relative h-56 bg-gradient-to-br from-green-100 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20 overflow-hidden">
-                        <div class="absolute inset-0 flex items-center justify-center">
-                            <i class="bx bxl-python text-6xl text-green-500/50 group-hover:scale-110 transition-transform duration-500"></i>
-                        </div>
-                        <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4">
-                            <a href="#" class="p-3 bg-white rounded-full hover:scale-110 transition-transform">
-                                <i data-lucide="external-link" class="w-5 h-5 text-black"></i>
-                            </a>
-                            <a href="https://p-prakash-01.github.io/Kisan-Mitra-app/" class="p-3 bg-white rounded-full hover:scale-110 transition-transform">
-                                <i data-lucide="github" class="w-5 h-5 text-black"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <h4 class="text-xl font-bold text-slate-900 dark:text-white mb-2">Farmer Pest Detection</h4>
-                        <p class="text-sm text-slate-500 dark:text-slate-400 mb-4 line-clamp-2">
-                            AI tool to identify crop pests from images and provide treatment suggestions using deep learning models.
-                        </p>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="px-2 py-1 rounded-md bg-slate-100 dark:bg-white/10 text-xs font-mono text-slate-600 dark:text-slate-300">TensorFlow</span>
-                            <span class="px-2 py-1 rounded-md bg-slate-100 dark:bg-white/10 text-xs font-mono text-slate-600 dark:text-slate-300">Python</span>
-                            <span class="px-2 py-1 rounded-md bg-slate-100 dark:bg-white/10 text-xs font-mono text-slate-600 dark:text-slate-300">CNN</span>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- Project 2 -->
-                <article class="project-card group bg-white dark:bg-white/5 rounded-2xl overflow-hidden border border-slate-200 dark:border-white/5 hover:border-brand-500/50 transition-all duration-300 hover:shadow-2xl hover:shadow-brand-500/10 reveal delay-100" data-category="web">
-                    <div class="relative h-56 bg-gradient-to-br from-blue-100 to-cyan-50 dark:from-blue-900/20 dark:to-cyan-900/20 overflow-hidden">
-                        <div class="absolute inset-0 flex items-center justify-center">
-                            <i class="bx bxs-cloud text-6xl text-blue-500/50 group-hover:scale-110 transition-transform duration-500"></i>
-                        </div>
-                        <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4">
-                            <a href="https://weather-comfort-checker.vercel.app/static/index.html" class="p-3 bg-white rounded-full hover:scale-110 transition-transform">
-                                <i data-lucide="external-link" class="w-5 h-5 text-black"></i>
-                            </a>
-                            <a href="https://github.com/P-PRAKASH-01/weather-comfort-checker" class="p-3 bg-white rounded-full hover:scale-110 transition-transform">
-                                <i data-lucide="github" class="w-5 h-5 text-black"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <h4 class="text-xl font-bold text-slate-900 dark:text-white mb-2">Weather Comfort Tracker</h4>
-                        <p class="text-sm text-slate-500 dark:text-slate-400 mb-4 line-clamp-2">
-                            Real-time weather dashboard calculating a custom comfort index based on humidity and temp.
-                        </p>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="px-2 py-1 rounded-md bg-slate-100 dark:bg-white/10 text-xs font-mono text-slate-600 dark:text-slate-300">JS</span>
-                            <span class="px-2 py-1 rounded-md bg-slate-100 dark:bg-white/10 text-xs font-mono text-slate-600 dark:text-slate-300">OpenWeather</span>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- Project 3 -->
-                <article class="project-card group bg-white dark:bg-white/5 rounded-2xl overflow-hidden border border-slate-200 dark:border-white/5 hover:border-brand-500/50 transition-all duration-300 hover:shadow-2xl hover:shadow-brand-500/10 reveal delay-200" data-category="web">
-                    <div class="relative h-56 bg-gradient-to-br from-orange-100 to-amber-50 dark:from-orange-900/20 dark:to-amber-900/20 overflow-hidden">
-                        <div class="absolute inset-0 flex items-center justify-center">
-                            <i class="bx bxs-graduation text-6xl text-orange-500/50 group-hover:scale-110 transition-transform duration-500"></i>
-                        </div>
-                        <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4">
-                            <a href="https://preparationtool.vercel.app/" class="p-3 bg-white rounded-full hover:scale-110 transition-transform">
-                                <i data-lucide="external-link" class="w-5 h-5 text-black"></i>
-                            </a>
-                            <a href="https://github.com/P-PRAKASH-01/PrepHub" class="p-3 bg-white rounded-full hover:scale-110 transition-transform">
-                                <i data-lucide="github" class="w-5 h-5 text-black"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <h4 class="text-xl font-bold text-slate-900 dark:text-white mb-2">PrepHub</h4>
-                        <p class="text-sm text-slate-500 dark:text-slate-400 mb-4 line-clamp-2">
-                            A web application for students to prepare earlier for their internships and jobs. Includes skill tracking.
-                        </p>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="px-2 py-1 rounded-md bg-slate-100 dark:bg-white/10 text-xs font-mono text-slate-600 dark:text-slate-300">Tailwind</span>
-                            <span class="px-2 py-1 rounded-md bg-slate-100 dark:bg-white/10 text-xs font-mono text-slate-600 dark:text-slate-300">HTML5</span>
-                        </div>
-                    </div>
-                </article>
-
-            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="projects-grid"></div>
         </div>
     </section>
 
@@ -744,6 +651,137 @@
             EMAILJS_TEMPLATE_ID: "template_u7gk0zg"
         };
 
+        // --- PROJECTS DATA ---
+        // To add a project, append one object: { name, description, tech: [], image, github, live }
+        // Leave image as "" to use the neutral placeholder; leave github/live as "" or "none" to hide that button.
+        const PROJECT_PLACEHOLDER_IMAGE = "assets/project-placeholder.svg";
+        const PROJECTS = [
+            {
+                name: "Engine Twin of MALE UAV",
+                // TODO: Refine description if needed to reflect exact modeled parameters
+                description: "Digital twin modeling propulsion performance, thermal dynamics, and health for a MALE UAV engine.",
+                // TODO: Update tech stack to match the exact tools/libraries used
+                tech: ["Python", "Digital Twin", "Simulation"],
+                image: "", // TODO: Add screenshot (e.g., "assets/projects/engine-twin.png")
+                github: "TODO: add GitHub repository URL",
+                live: "none"
+            },
+            {
+                name: "Garments E-commerce Website",
+                // TODO: Refine description if needed
+                description: "Responsive online storefront for browsing apparel, filtering collections, and managing a shopping cart.",
+                // TODO: Update tech stack if additional frameworks/tools were used
+                tech: ["HTML5", "CSS3", "JavaScript"],
+                image: "", // TODO: Add screenshot (e.g., "assets/projects/garments-ecommerce.png")
+                github: "TODO: add GitHub repository URL",
+                live: "TODO: add live website URL or set to 'none'"
+            },
+            {
+                name: "Farmer Pest Detection",
+                description: "AI tool to identify crop pests from images and provide treatment suggestions using deep learning models.",
+                tech: ["TensorFlow", "Python", "CNN"],
+                image: "", // TODO: Add screenshot (e.g., "assets/projects/farmer-pest-detection.png")
+                github: "TODO: add GitHub repository URL",
+                live: "https://p-prakash-01.github.io/Kisan-Mitra-app/"
+            },
+            {
+                name: "Weather Comfort Tracker",
+                description: "Real-time weather dashboard calculating a custom comfort index based on humidity and temp.",
+                tech: ["JS", "OpenWeather"],
+                image: "", // TODO: Add screenshot (e.g., "assets/projects/weather-comfort-tracker.png")
+                github: "https://github.com/P-PRAKASH-01/weather-comfort-checker",
+                live: "https://weather-comfort-checker.vercel.app/static/index.html"
+            },
+            {
+                name: "PrepHub",
+                description: "A web application for students to prepare earlier for their internships and jobs. Includes skill tracking.",
+                tech: ["Tailwind", "HTML5"],
+                image: "", // TODO: Add screenshot (e.g., "assets/projects/prephub.png")
+                github: "https://github.com/P-PRAKASH-01/PrepHub",
+                live: "https://preparationtool.vercel.app/"
+            }
+        ];
+
+        const GITHUB_ICON_SVG = '<svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>';
+        const GLOBE_ICON_SVG = '<svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>';
+
+        function isValidProjectUrl(url) {
+            return typeof url === "string" && new RegExp("^https?://", "i").test(url.trim());
+        }
+
+        function resolveProjectImage(image) {
+            if (typeof image !== "string") return PROJECT_PLACEHOLDER_IMAGE;
+            const trimmed = image.trim();
+            if (!trimmed || trimmed.toLowerCase() === "none" || trimmed.toUpperCase().startsWith("TODO")) {
+                return PROJECT_PLACEHOLDER_IMAGE;
+            }
+            return trimmed;
+        }
+
+        function escapeHtml(value) {
+            return String(value)
+                .replace(/&/g, "&amp;")
+                .replace(/</g, "&lt;")
+                .replace(/>/g, "&gt;")
+                .replace(/"/g, "&quot;")
+                .replace(/'/g, "&#39;");
+        }
+
+        function createProjectLink(url, label, iconSvg) {
+            return `<a href="${escapeHtml(url.trim())}" target="_blank" rel="noopener noreferrer" aria-label="${escapeHtml(label)}" title="${escapeHtml(label)}" class="inline-flex items-center justify-center w-10 h-10 min-w-[40px] min-h-[40px] rounded-xl border border-slate-200 dark:border-white/10 bg-slate-50 dark:bg-white/5 text-slate-700 dark:text-slate-200 hover:border-brand-500 hover:text-brand-600 dark:hover:border-brand-500 dark:hover:text-brand-400 hover:bg-brand-50 dark:hover:bg-brand-500/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 focus-visible:ring-offset-2 focus-visible:ring-offset-white dark:focus-visible:ring-offset-[#0B0C15] transition-colors">${iconSvg}</a>`;
+        }
+
+        function renderProjects() {
+            const projectsGrid = document.getElementById("projects-grid");
+            const projectCountEl = document.getElementById("project-count");
+
+            if (projectCountEl) {
+                projectCountEl.textContent = String(PROJECTS.length);
+            }
+
+            if (!projectsGrid) return;
+
+            projectsGrid.innerHTML = PROJECTS.map((project, index) => {
+                const imageSrc = resolveProjectImage(project.image);
+                const techTags = (project.tech || []).map((tag) =>
+                    `<span class="px-2 py-1 rounded-md bg-slate-100 dark:bg-white/10 text-xs font-mono text-slate-600 dark:text-slate-300">${escapeHtml(tag)}</span>`
+                ).join("");
+
+                const links = [];
+                if (isValidProjectUrl(project.github)) {
+                    links.push(createProjectLink(project.github, `Source code on GitHub - ${project.name}`, GITHUB_ICON_SVG));
+                }
+                if (isValidProjectUrl(project.live)) {
+                    links.push(createProjectLink(project.live, `Live website - ${project.name}`, GLOBE_ICON_SVG));
+                }
+
+                const linksRow = links.length > 0
+                    ? `<div class="flex items-center gap-3 mt-auto pt-4 border-t border-slate-200 dark:border-white/10">${links.join("")}</div>`
+                    : "";
+
+                const delayClass = index % 3 === 1 ? "delay-100" : index % 3 === 2 ? "delay-200" : "";
+
+                return `
+                <article class="project-card flex flex-col bg-white dark:bg-white/5 rounded-2xl overflow-hidden border border-slate-200 dark:border-white/5 hover:border-brand-500/50 transition-all duration-300 hover:shadow-2xl hover:shadow-brand-500/10 reveal ${delayClass}">
+                    <div class="relative h-56 bg-slate-100 dark:bg-slate-800/70 overflow-hidden">
+                        <img src="${escapeHtml(imageSrc)}" alt="${escapeHtml(project.name)} preview" loading="lazy" class="w-full h-full object-cover" onerror="this.onerror=null;this.src='${PROJECT_PLACEHOLDER_IMAGE}'">
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col">
+                        <h4 class="text-xl font-bold text-slate-900 dark:text-white mb-2">${escapeHtml(project.name)}</h4>
+                        <p class="text-sm text-slate-500 dark:text-slate-400 mb-4 line-clamp-2">
+                            ${escapeHtml(project.description)}
+                        </p>
+                        <div class="flex flex-wrap gap-2 ${links.length > 0 ? "mb-5" : ""}">
+                            ${techTags}
+                        </div>
+                        ${linksRow}
+                    </div>
+                </article>`;
+            }).join("");
+        }
+
+        renderProjects();
+
         // Initialize Icons
         lucide.createIcons();
 
@@ -868,39 +906,6 @@
 
         closeModal.addEventListener('click', hideModal);
         modal.addEventListener('click', (e) => { if (e.target === modal) hideModal(); });
-
-        // --- PROJECT FILTERING ---
-        const filterBtns = document.querySelectorAll('.filter-btn');
-        const projectCards = document.querySelectorAll('.project-card');
-
-        filterBtns.forEach(btn => {
-            btn.addEventListener('click', () => {
-                // Update active state
-                filterBtns.forEach(b => {
-                    b.classList.remove('active', 'bg-white', 'dark:bg-white/10', 'shadow-sm');
-                    b.classList.add('text-slate-500', 'dark:text-slate-400');
-                });
-                btn.classList.add('active', 'bg-white', 'dark:bg-white/10', 'shadow-sm');
-                btn.classList.remove('text-slate-500', 'dark:text-slate-400');
-
-                const filterValue = btn.getAttribute('data-filter');
-
-                projectCards.forEach(card => {
-                    if (filterValue === 'all' || card.getAttribute('data-category') === filterValue) {
-                        card.style.display = 'block';
-                        // Trigger animation
-                        card.style.opacity = '0';
-                        card.style.transform = 'translateY(10px)';
-                        setTimeout(() => {
-                            card.style.opacity = '1';
-                            card.style.transform = 'translateY(0)';
-                        }, 50);
-                    } else {
-                        card.style.display = 'none';
-                    }
-                });
-            });
-        });
 
         // --- CONTACT FORM HANDLING ---
         const form = document.getElementById('contact-form');
